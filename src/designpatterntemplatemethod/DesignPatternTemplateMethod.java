@@ -5,17 +5,29 @@
  */
 package designpatterntemplatemethod;
 
-/**
- *
- * @author rocket
- */
+import designpatterntemplatemethod.papers.BasicEngineering;
+import designpatterntemplatemethod.papers.ComputerScience;
+import designpatterntemplatemethod.papers.Electronics;
+
 public class DesignPatternTemplateMethod {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        System.out.println("Template Method design pattern demo");
+        
+        BasicEngineering be = new ComputerScience();
+        
+        System.out.println("Computer Science Papers: ");
+        
+        be.papers();
+        
+        System.out.println("");
+        
+        be = new Electronics();
+        
+        System.out.println("Electronics Papers: ");
+        
+        be.papers();
     }
     
 }
